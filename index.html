@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bx{
+            width: 1620px;
+            height: 50px;
+            background-color: skyblue;
+            margin: 0 auto;
+        }
+        ul{
+            list-style: none;/*清除点*/
+        }
+        .bx a{
+            
+            width: 270px;
+            height: 50px;
+            display: inline-block;/*看绿色范围*/
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+        a:hover{
+            background-color: pink;
+        }
+        .bx ul li {      
+           float: left;       
+        }
+        .head img{
+            width: 20%;
+            height: 100px;
+        }
+        .dropcont {
+            display: none;
+        }
+
+        .drop:hover .dropcont {
+            display: block;
+        }
+        .content{
+           
+            height: 200px;
+            display: flex;
+            margin:  10px;
+        }
+        .left{
+           
+            height: 200px;
+            background-color:rosybrown;
+            flex: 1px;
+        }
+        .right{
+           
+            height: 200px;
+            background-color: bisque;
+            flex: 1px;
+        }
+        .part{
+            display: flex;
+            background-color: gray;
+            height: 100px;
+            margin: 5px 10px;
+        }
+        .fir .sec .thr{
+            flex: 3;
+
+            height: 40px;
+
+        }
+        .sec img{
+            height: 40px;
+        }
+        a{
+            text-decoration: none;/*清除下划线*/
+        }
+        span{
+            color: #777;
+            font-size: 12px;
+            text-align: center;
+        }
+        .head #top{/*右上角*/
+            float: right;
+            height: 100px;
+            color: cadetblue;
+            width: 400px;
+        }
+        .head #top a{
+            background-color: aliceblue;
+        }
+        .head table{
+        border-collapse: separate; /* 将边框合并为单一边框以外的边距 */
+        border-spacing: 10px; /* 设置单元格之间的间距，可以根据需要调整具体数值 */
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <img src="https://img2.baidu.com/it/u=3433798576,392706587&fm=253&fmt=auto&app=138&f=JPEG?w=527&h=395" alt="">
+        <div id="top"> 
+            <table>
+                <tr>
+                   <td><a href="#">中国红色旅游网</a></td> 
+                   <td><a href="#">长城国家文化公园旅游网</a> </td>
+                   <td><a href="#">我的</a></td> 
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="bx">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新闻资讯</a></li>
+            <li><a href="#">出游购票</a></li>
+            <li><a href="#">山水风光</a></li><!-- 放视频-->
+            <li class="drop">
+
+                <a href="#">注册与登录</a>
+                <ul class="dropcont">
+                    <li><a href="#">会员注册</a></li>
+                </ul>
+            
+            </li><!-- -->
+            <li><a href="#">美食之遇</a></li>
+           
+        </ul>
+    </div>
+    <div class="pic1">
+        <img src="https://img1.baidu.com/it/u=2709003996,1526970051&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="" width="100%" height="400px">
+    </div>
+    <div class="content">
+       <div class="left">
+        <p>
+            这里有美丽的自然风光、丰富的人文历史和令人心旷神怡的旅游体验。在这里，你可以感受到山水之间的和谐共处，享受到大自然的恩赐。
+
+如果你是爱好户外活动的人，我们的目的地一定不会让你失望。这里有壮观的峡谷、雄伟的山峰、清澈的湖泊和神秘的森林等让你流连忘返的景点。你可以徒步穿越大片原始森林，沐浴在清新的山间空气中，感受到大自然的魅力和力量。
+
+如果你对历史文化感兴趣，我们的目的地同样值得一游。这里有古老的庙宇、宏伟的宫殿、独具特色的民风民俗等可以让你领略深厚的历史文化底蕴。你可以参观博物馆、民俗村落以及历史古迹，了解到当地丰富的文化内涵和传承至今的传统习俗。
+
+当然，旅游除了景点还有美食、舒适的住宿和互动好玩的活动。在我们的目的地，你可以品尝到当地地道美食，享受到舒适的住宿环境，并参与到各种有趣的活动中，让你的旅途更加充实和难忘。
+        </p>
+       </div>
+       <div class="right">
+        <p>
+            来到我们的旅游目的地，你将进入一个充满惊喜和奇遇的世界。这里拥有壮丽的自然风光、独特的文化遗产和令人陶醉的美食，让你的心灵得到极致的满足。
+
+无论你是寻求冒险刺激还是追求宁静放松，我们的目的地都能满足你的需求。你可以踏上徒步之旅，穿越崇山峻岭，探索神秘而美丽的自然景观。你也可以选择乘坐船只，在湖泊或海洋上畅游，感受那宁静与浩渺交织的美妙。
+
+这里还有丰富多样的文化体验等待着你。你可以沉浸在古老寺庙的宁静氛围中，感受到心灵的净化；参与到传统节日的狂欢中，感受到浓厚的民俗文化；还可以亲身体验手工艺品的制作过程，感受到独特的艺术魅力。
+
+当谈及美食，我们的目的地无疑是一个天堂。
+        </p>
+       </div>
+    </div>
+    <center>
+        <div class="part">
+            <div class="fir">
+                 <h5>查服务</h5>
+             <ul>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">会员俱乐部</a></li>
+                <li><a href="#">阳光保障</a></li>
+                </ul>
+            </div>
+            <div class="sec">
+                <h5>本站二维码</h5>
+                 <ul>
+               <li><a href="#">扫一扫有惊喜</a></li>
+               </ul>
+                <img src="https://img0.baidu.com/it/u=3021883569,1259262591&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1695229200&t=733e02dabbf031c81178cf9a860463fc" alt="">
+           
+           </div>
+           <div class="thr">
+            <h5>看攻略</h5>
+             <ul>
+                <li><a href="#">风向标</a></li>
+                <li><a href="#">游记</a></li>
+                <li><a href="#">达人玩法</a></li>
+             </ul>
+             </div>
+        </div>
+    </center>
+   <div class="end">
+    <span>XX旅游网站中心设于江西南昌</span>
+    <span>联系方式：123456</span>
+    <span style="color: red;">关于</span>
+   </div>
+</body>
+</html>
