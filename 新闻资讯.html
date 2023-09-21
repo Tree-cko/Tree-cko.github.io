@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bx{
+            width: 1620px;
+            height: 50px;
+            background-color: skyblue;
+            margin: 0 auto;
+        }
+        ul{
+            list-style: none;/*清除点*/
+        }
+        .bx a{
+            
+            width: 270px;
+            height: 50px;
+            display: inline-block;/*看绿色范围*/
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+       .bx a:hover{
+            background-color: pink;
+        }
+        .bx ul li {      
+           float: left;       
+        }
+        .head img{
+            width: 20%;
+            height: 100px;
+        }
+       
+        .dropcont {
+            display: none;
+        }
+
+        .drop:hover .dropcont {
+            display: block;
+        }
+        .content{
+           
+            height: 200px;
+            display: flex;
+            margin:  10px;
+        }
+        .left{
+           
+            height: 200px;
+            background-color:rosybrown;
+            flex: 1px;
+        }
+        .right{
+           
+            height: 200px;
+            background-color: bisque;
+            flex: 1px;
+        }
+        .part{
+            display: flex;
+            background-color: gray;
+            height: 100px;
+            margin: 5px 10px;
+        }
+        .fir .sec .thr{
+            flex: 3;
+
+            height: 40px;
+
+        }
+        .sec img{
+            height: 40px;
+        }
+        a{
+            text-decoration: none;/*清除下划线*/
+        }
+        span{
+            color: #777;
+            font-size: 12px;
+            text-align: center;
+        }
+        #spread{
+            /*放红图*/
+            display: flex;
+            width: 1400px;
+            height: 100px;
+            margin: 5px 200px;
+            overflow: hidden;
+            margin-left: 140px;
+        }
+        .m .n{
+            flex:1;
+       
+        }
+
+        .head #top{/*右上角*/
+            float: right;
+            height: 100px;
+            color: cadetblue;
+            width: 400px;
+        }
+        .head #top a{
+            background-color: aliceblue;
+        }
+        .head table{
+        border-collapse: separate; /* 将边框合并为单一边框以外的边距 */
+        border-spacing: 10px; /* 设置单元格之间的间距，可以根据需要调整具体数值 */
+        }
+        .pics{
+            /*轮播图*/
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+        .pics img{
+            height: 580px;
+        }
+        .part0{/*在轮播图右侧防止新闻事件*/
+            width: 35%;
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            right: 0;
+        }
+        .partx{
+            margin-bottom: 10px;
+        
+
+        }
+       
+        .pic img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .slide{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+            margin-left: 140px;
+        }
+        .slide.active{
+            opacity: 1;
+        }
+        
+    </style>
+       
+</head>
+<body>
+    <div class="head">
+        <img src="https://img2.baidu.com/it/u=3433798576,392706587&fm=253&fmt=auto&app=138&f=JPEG?w=527&h=395" alt="">
+        <div id="top"> 
+            <table>
+                <tr>
+                   <td><a href="#">中国红色旅游网</a></td> 
+                   <td><a href="#">长城国家文化公园旅游网</a> </td>
+                   <td><a href="#">我的</a></td> 
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="bx">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新闻资讯</a></li>
+            <li><a href="#">出游购票</a></li>
+            <li><a href="#">山水风光</a></li><!-- 放视频-->
+            <li class="drop">
+
+                <a href="#">注册与登录</a>
+                <ul class="dropcont">
+                    <li><a href="#">会员注册</a></li>
+                </ul>
+            
+            </li><!-- -->
+            <li><a href="#">美食之遇</a></li>
+           
+        </ul>
+    </div>
+    <div id="spread">
+        <a href="#"> <div class="m"><img src="http://www.ctnews.com.cn/pic/2020-04/03/70266_4ee387cb-6ff5-4d72-b22c-ed395e6c788a.png" alt="" width="900px"></div></a>
+        <a href="#"> <div class="n"><img src="http://www.ctnews.com.cn/pic/2023-08/21/148301_a12c6c0b-80da-4436-9d0e-c8eb8c66f2e0.png" alt="" width="500px"></div></a>
+    </div>
+    <div class="pics">
+        <div class="slide"><img src="http://www.ctnews.com.cn/news/pic/2023-09/20/149663_t1_(0X85X585X414)33cd4f47-a4fc-4298-a838-d6bdc35414bd.png" alt="?"></div>
+        <div class="slide"><img src="http://www.ctnews.com.cn/jqdj/pic/2023-09/19/149602_t1_(0X32X600X370)2854182e-3fca-4dc1-8e6e-19efe5fd2423.jpg" alt="?"></div>
+        <div class="slide"><img src="http://www.ctnews.com.cn/spzb/pic/2023-09/19/149587_t1_(10X13X583X335)541296ee-cf11-4fc0-984e-3e9dc96be5fb.jpg" alt="?"></div>
+        <div class="part0">
+             <div class="partx">
+                <h3>地方关注</h3>
+                <ul>
+                    <a href="#"><li>2023年湖南省乡村文化旅游节</li></a>
+                    <a href="#"><li>第二十三届中国高淳固城湖螃蟹节开幕在即</li></a>
+                    <a href="#"><li>山西文旅强省建设步伐进一步加快</li></a>
+                    <a href="#"><li>第二届邵阳旅游发展大会在隆回开幕</li></a>
+                </ul>
+            </div>
+            <div class="partx">
+                <h3>要闻聚焦</h3>
+                <ul>
+                    <a href="#"><li>胡和平回见俄罗斯经济发展部长</li></a>
+                    <a href="#"><li>文化和旅游部副部长回见希腊文化部副部长</li></a>
+                    <a href="#"><li>文旅系统青年科研人才扶持计划入选项目名单</li></a>
+                    <a href="#"><li>新版外国人来华签证申请表上线办理来华签证</li></a>
+                </ul>
+            </div>
+            <div class="partx">
+                <h3>观点声音</h3>
+                <ul>
+                    <a href="#"><li>有效发挥旅游带动作用</li></a>
+                    <a href="#"><li>文化场馆延时开放 彰显为民服务理念</li></a>
+                    <a href="#"><li>强化公共场所“公益”属性 更好满足民众旅游需求</li></a>
+                    
+                </ul>
+            </div>
+            <div class="partx">
+                <h3>观点声音</h3>
+                <ul>
+                    <a href="#"><li>有效发挥旅游带动作用</li></a>
+                    <a href="#"><li>文化场馆延时开放 彰显为民服务理念</li></a>
+                    <a href="#"><li>强化公共场所“公益”属性 更好满足民众旅游需求</li></a>
+                    
+                </ul>
+            </div>
+            <div class="partx">
+                <h3>观点声音</h3>
+                <ul>
+                    <a href="#"><li>有效发挥旅游带动作用</li></a>
+                    <a href="#"><li>文化场馆延时开放 彰显为民服务理念</li></a>
+                    <a href="#"><li>强化公共场所“公益”属性 更好满足民众旅游需求</li></a>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+      <script>
+                // 获取轮播容器和所有幻灯片
+        const slideshowContainer = document.querySelector('.pics');
+        const slides = Array.from(document.querySelectorAll('.slide'));
+
+        let currentIndex = 0; // 当前显示的幻灯片的索引
+
+        // 定义函数以切换到下一张幻灯片
+        function nextSlide() {
+        // 隐藏当前的幻灯片
+        slides[currentIndex].classList.remove('active');
+
+        // 增加索引，并在需要时循环
+        currentIndex = (currentIndex + 1) % slides.length;
+
+        // 显示下一张幻灯片
+        slides[currentIndex].classList.add('active');
+        }
+
+        // 启动定时器以自动切换幻灯片
+        setInterval(nextSlide, 2000);
+
+        </script>
+    <div class="content">
+       <div class="left">
+      <p>9月19日，2023海洋旅游高质量发展创新交流会暨第三届海洋旅游学术会议在福建省平潭综合实验区举办。本次活动由文化和旅游部资源开发司指导，福建省文化和旅游厅、平潭综合实验区管委会、福建师范大学、中国管理科学学会旅游管理专业委员会联合主办。
+
+        文化和旅游部资源开发司一级巡视员宋奇慧表示，海洋旅游已成为海洋经济的支柱产业和助力海洋强国建设的抓手。推动海洋旅游高质量发展，要处理好海洋保护与开发、发展与安全之间的关系。同时，要着眼全国、放眼世界，坚持陆海统筹，加强海洋旅游空间规划和海洋旅游学术研究，为海洋旅游高质量发展提供可借鉴的成功经验和样本。
+        
+        福建“七沿”线性布局滨海风景道旅游产品体系，形成“一道一带一区”空间发展格局。同时按照“风景＋场景”的思路，福建各地在1号滨海风景道开发建设中，将一切开阔开放空间、一切商业环境、一切文化空间、一切愿意打开的生产空间、一切愿意打开的生活空间等“五个一切”植入场景，同时不断深入挖掘福建海洋文化、沿海生活的现代价值，积极创造更多、更好场景，使1号滨海风景道实现“处处都是旅游目的地”。福建海洋旅游大有可为，期望各位专家学者为福建海洋旅游发展把脉问诊、献计献策，吸引更多游客体验“来福建 享福气 自由自在好生活”。</p>
+       </div>
+       <div class="right">
+       <p>旅游热是这个暑期的一大亮点。根据中国旅游研究院预测，这个暑期是过去5年来旅游市场最火热的暑期，预计6—8月国内旅游人数占全年国内旅游出游人数的28.11%，实现国内旅游收入1.2万亿元，约占全年国内旅游收入的27.46%。
+
+        活跃在旅游一线的导游度过了一个分外忙碌的暑期，他们带游客赴各地游赏自然美景，到博物馆感受博大精深的中华文化，在城市的街头巷尾品味寻常生活。他们是旅游业的重要参与者，也是旅游市场活力与魅力的见证者。</p>
+        携程日前发布的《2023年暑期出游市场报告》显示，北京、上海、成都、广州、杭州、西安、重庆、深圳、南京、长沙位列暑期国内热门旅游目的地前十名。北京尤受亲子游、研学游群体青睐，故宫博物院、天安门广场、中国国家博物馆、八达岭长城、北京环球度假区、国家自然博物馆等都是预订热门景区，常一票难求。
+    </div>
+    </div>
+    <center>
+        <div class="part">
+            <div class="fir">
+                 <h5>查服务</h5>
+             <ul>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">会员俱乐部</a></li>
+                <li><a href="#">阳光保障</a></li>
+                </ul>
+            </div>
+            <div class="sec">
+                <h5>本站二维码</h5>
+                 <ul>
+               <li><a href="#">扫一扫有惊喜</a></li>
+               </ul>
+                <img src="https://img0.baidu.com/it/u=3021883569,1259262591&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1695229200&t=733e02dabbf031c81178cf9a860463fc" alt="">
+           
+           </div>
+           <div class="thr">
+            <h5>看攻略</h5>
+             <ul>
+                <li><a href="#">风向标</a></li>
+                <li><a href="#">游记</a></li>
+                <li><a href="#">达人玩法</a></li>
+             </ul>
+             </div>
+        </div>
+    </center>
+   <div class="end">
+    <span>XX旅游网站中心设于江西南昌</span>
+    <span>联系方式：123456</span>
+    <span style="color: red;">关于</span>
+   </div>
+</body>
+</html>
